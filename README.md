@@ -35,6 +35,9 @@
 Option + Command로 Spotlight 실행 -> 터미널 입력 후 실행 ->
 
 ```bash
+cd (다운로드한 폴더 경로)
+![image](https://github.com/user-attachments/assets/a830d10b-cd89-4678-86ad-593f18fc89d7)
+
 chmod +x eclass_downloader.command
 eclass_downloader.command
 ```
