@@ -25,59 +25,33 @@
 
 ---
 
-## 설치 및 설정
-
-1. 저장소 클론
-
-   ```bash
-   git clone https://github.com/DalimooD/eclass-downloader_macOS.git  # macOS 버전
-   git clone https://github.com/DalimooD/eclass-downloader_Windows.git # Windows 버전
-   cd eclass-downloader_${OS}
-   ```
-
-2. 가상환경 생성 및 진입
-
-   ```bash
-   python3 -m venv ./bin/eclass-venv
-   source ./bin/eclass-venv/bin/activate   # macOS/Linux
-   .\bin\eclass-venv\Scripts\activate    # Windows PowerShell
-   ```
-
-3. 의존 패키지 설치
-
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-4. ChromeDriver 설치
-
-   - Chrome 버전에 맞는 ChromeDriver를 [공식 사이트](https://sites.google.com/chromium.org/driver/)에서 다운로드
-   - `chromedriver` 실행파일을 시스템 `PATH` 또는 프로젝트 루트의 `bin/` 폴더에 넣기
-
----
-
 ## 사용 방법
 
 ### macOS: `.command` 실행
 
+Option + Command로 Spotlight 실행 -> 터미널 입력 후 실행 ->
+
 ```bash
-chmod +x bin/eclass_downloader.command
-./bin/eclass_downloader.command
+chmod +x eclass_downloader.command
+eclass_downloader.command
 ```
 
 ### Windows: `.bat` 실행
 
+혹은 Windows + S -> cmd 입력 후 실행 ->
+
 ```batch
-bin\eclass_downloader.bat
+eclass_downloader.bat
 ```
 
 스크립트가 실행되면 순서대로:
 1. 가상환경을 확인/생성하고 패키지 설치
-2. 브라우저를 headless 모드로 실행하고 쿠키 주입
-3. 강좌 ID 입력 → 모듈 목록 수집
-4. 다운로드 모드 선택 (전체, 번호, 범위, 제외)
-5. m3u8 링크 혹은 MP4 파일 다운로드
+2. 쿠키 존재 여부를 확인하고 없다면 수동 생성
+   **브라우저 창이 자동으로 열립니다. 로그인 한 뒤 종료하지 말고 터미널에서 [Enter] 버튼을 입력해주세요**
+4. 브라우저를 headless 모드로 실행하고 쿠키 주입
+5. 강좌 ID 입력 → 모듈 목록 수집
+6. 다운로드 모드 선택 (전체, 번호, 범위, 제외)
+7. m3u8 링크 혹은 MP4 파일 다운로드
 
 다운로드된 결과물은 프로젝트 최상위의 강좌명 폴더 아래에 저장됩니다.
 
