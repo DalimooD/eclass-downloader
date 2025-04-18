@@ -30,19 +30,17 @@
 
 ## 사용 방법
 
-### macOS: `.command` 실행
+## macOS: `.command` 더블 클릭하여 실행
 
-Option + Command로 Spotlight 실행 -> 터미널 입력 후 실행 ->
+혹은 Option + Command로 Spotlight 실행 -> 터미널 입력 후 실행 ->
 
 ```bash
 cd (다운로드한 폴더 경로)
-![image](https://github.com/user-attachments/assets/a830d10b-cd89-4678-86ad-593f18fc89d7)
-
 chmod +x eclass_downloader.command
 eclass_downloader.command
 ```
 
-### Windows: `.bat` 실행
+## Windows: `.bat` 더블 클릭하여 실행
 
 혹은 Windows + S -> cmd 입력 후 실행 ->
 
